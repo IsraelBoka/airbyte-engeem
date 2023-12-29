@@ -13,13 +13,11 @@ import { Card } from "components/ui/Card";
 import { FlexContainer } from "components/ui/Flex";
 import { Heading } from "components/ui/Heading";
 import { Icon } from "components/ui/Icon";
-import { ExternalLink } from "components/ui/Link";
 import { Text } from "components/ui/Text";
 
 import { useListBuilderProjects } from "core/api";
 import { ConnectorManifest } from "core/api/types/ConnectorManifest";
 import { Action, Namespace, useAnalyticsService } from "core/services/analytics";
-import { links } from "core/utils/links";
 import { useNotificationService } from "hooks/services/Notification";
 import { ConnectorBuilderLocalStorageProvider } from "services/connectorBuilder/ConnectorBuilderLocalStorageService";
 
@@ -175,12 +173,6 @@ const ConnectorBuilderCreatePageInner: React.FC = () => {
           dataTestId="start-from-scratch"
         />
       </FlexContainer>
-      <ExternalLink href={links.connectorBuilderTutorial}>
-        <FlexContainer alignItems="center" gap="sm">
-          <Icon type="docs" />
-          <FormattedMessage id="connectorBuilder.createPage.tutorialPrompt" />
-        </FlexContainer>
-      </ExternalLink>
     </FlexContainer>
   );
 };

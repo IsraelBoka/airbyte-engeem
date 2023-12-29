@@ -12,7 +12,6 @@ import { WorkspacesPicker } from "components/workspace/WorkspacesPicker";
 import { useListWorkspacesInfinite } from "core/api";
 import { useConfig } from "core/config";
 import { FeatureItem, useFeature } from "core/services/features";
-import { links } from "core/utils/links";
 import { useAppMonitoringService } from "hooks/services/AppMonitoringService";
 import { useGetConnectorsOutOfDate } from "hooks/services/useConnector";
 import { RoutePaths } from "pages/routePaths";
@@ -23,7 +22,6 @@ import styles from "./MainView.module.scss";
 import { AirbyteHomeLink } from "../SideBar/AirbyteHomeLink";
 import { MenuContent } from "../SideBar/components/MenuContent";
 import { NavItem } from "../SideBar/components/NavItem";
-import { ResourcesDropdown } from "../SideBar/components/ResourcesDropdown";
 import { MainNavItems } from "../SideBar/MainNavItems";
 import { SideBar } from "../SideBar/SideBar";
 
@@ -41,14 +39,6 @@ const MainView: React.FC<React.PropsWithChildren<unknown>> = (props) => {
         <MenuContent>
           <MainNavItems />
           <MenuContent>
-            <NavItem
-              as="a"
-              to={links.updateLink}
-              icon={<Icon type="rocket" />}
-              label={<FormattedMessage id="sidebar.update" />}
-              testId="updateLink"
-            />
-            <ResourcesDropdown />
             <NavItem
               label={<FormattedMessage id="sidebar.settings" />}
               icon={<Icon type="gear" />}

@@ -11,7 +11,6 @@ import { Text } from "components/ui/Text";
 import { InfoTooltip, Tooltip } from "components/ui/Tooltip";
 
 import { Action, Namespace, useAnalyticsService } from "core/services/analytics";
-import { links } from "core/utils/links";
 import { BuilderView, useConnectorBuilderFormState } from "services/connectorBuilder/ConnectorBuilderStateService";
 
 import { AddStreamButton } from "./AddStreamButton";
@@ -197,14 +196,6 @@ export const BuilderSidebar: React.FC<BuilderSidebarProps> = React.memo(({ class
         >
           <FormattedMessage id="connectorBuilder.slackChannelTooltip" />
         </Tooltip>
-        <Text size="sm" className={styles.slackLink}>
-          <a href={links.connectorBuilderTutorial} target="_blank" rel="noreferrer">
-            <FlexContainer gap="sm" justifyContent="center" alignItems="flex-start" as="span">
-              <Icon type="docs" />
-              <FormattedMessage id="connectorBuilder.createPage.tutorialPrompt" />
-            </FlexContainer>
-          </a>
-        </Text>
       </FlexContainer>
     </FlexContainer>
   );
