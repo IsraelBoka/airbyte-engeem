@@ -795,7 +795,7 @@
   "settings.notifications.requiredNotificationTooltip": "This notification cannot be disabled",
   "settings.notifications.successMessage": "Notification settings updated",
   "settings.notifications.errorMessage": "There was an error updating your notification settings",
-  "settings.notifications.description": "Choose what messages you'd like to receive from NGM-What ",
+  "settings.notifications.description": "Choose what messages you'd like to receive from NGM- ",
   "settings.notifications.emailRecipient": "All enabled email notifications will be sent to this email.",
   "settings.notifications.email": "Email",
   "settings.notifications.webhook": "Webhook",
@@ -1584,7 +1584,7 @@
   "firebase.auth.error.tooManyRequests": "Too many retries. Please wait 10 minutes before trying again.",
   "firebase.auth.error.default": "Confirmation email cannot be sent. Please try again later.",
 
-  "trial.alertMessage": "You are using a trial of NGM-What Your trial ends in <b>{remainingDays, plural, one {# day} other {# days}}</b>. <lnk>Purchase now</lnk>",
+  "trial.alertMessage": "You are using a trial of NGM- Your trial ends in <b>{remainingDays, plural, one {# day} other {# days}}</b>. <lnk>Purchase now</lnk>",
 
   "trial.preTrialAlertMessage": "Your 14-day trial of NGM- will start once your first successful sync has completed.",
   "verifyEmail.success": "You successfully verified your email. Thank you.",

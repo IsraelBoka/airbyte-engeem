@@ -6,7 +6,7 @@ import { useAuthService } from "core/services/auth";
 import { useLocalStorage } from "core/utils/useLocalStorage";
 import { useCurrentWorkspace } from "hooks/services/useWorkspace";
 
-const AIRBYTE = "Airbyte";
+const AIRBYTE = "NGM-";
 const SEPARATOR = "|";
 
 interface FormattedHeadTitle {
