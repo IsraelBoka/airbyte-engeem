@@ -9,7 +9,7 @@ services:
   # hook in case we need to add init behavior
   # every root service (no depends_on) should depend on init
   init:
-    image: airbyte/init:${VERSION}
+    image: airbyte/init:dev-edc5d27084
     logging: *default-logging
     container_name: init
     command: /bin/sh -c "./scripts/create_mount_directories.sh /local_parent ${HACK_LOCAL_ROOT_PARENT} ${LOCAL_ROOT}"
@@ -19,7 +19,7 @@ services:
     volumes:
       - ${HACK_LOCAL_ROOT_PARENT}:/local_parent
   bootloader:
-    image: airbyte/bootloader:${VERSION}
+    image: airbyte/bootloader:dev-edc5d27084
     logging: *default-logging
     container_name: airbyte-bootloader
     environment:
@@ -37,7 +37,7 @@ services:
       init:
         condition: service_completed_successfully
   db:
-    image: airbyte/db:${VERSION}
+    image: airbyte/db:dev-edc5d27084
     logging: *default-logging
     container_name: airbyte-db
     restart: unless-stopped
@@ -55,7 +55,7 @@ services:
     networks:
       - airbyte_internal
   worker:
-    image: airbyte/worker:${VERSION}
+    image: airbyte/worker:dev-edc5d27084
     logging: *default-logging
     container_name: airbyte-worker
     restart: unless-stopped
@@ -138,7 +138,7 @@ services:
       bootloader:
         condition: service_completed_successfully
   server:
-    image: airbyte/server:${VERSION}
+    image: airbyte/server:dev-edc5d27084
     logging: *default-logging
     container_name: airbyte-server
     restart: unless-stopped
@@ -200,7 +200,7 @@ services:
       bootloader:
         condition: service_completed_successfully
   webapp:
-    image: airbyte/webapp:${VERSION}
+    image: airbyte/webapp:dev-edc5d27084
     logging: *default-logging
     container_name: airbyte-webapp
     restart: unless-stopped
@@ -215,7 +215,7 @@ services:
       bootloader:
         condition: service_completed_successfully
   airbyte-temporal:
-    image: airbyte/temporal:${VERSION}
+    image: airbyte/temporal:dev-edc5d27084
     logging: *default-logging
     container_name: airbyte-temporal
     restart: unless-stopped
@@ -232,7 +232,7 @@ services:
     networks:
       - airbyte_internal
   airbyte-cron:
-    image: airbyte/cron:${VERSION}
+    image: airbyte/cron:dev-edc5d27084
     logging: *default-logging
     container_name: airbyte-cron
     restart: unless-stopped
@@ -270,7 +270,7 @@ services:
       bootloader:
         condition: service_completed_successfully
   airbyte-api-server:
-    image: airbyte/airbyte-api-server:${VERSION}
+    image: airbyte/airbyte-api-server:0.50.40
     logging: *default-logging
     container_name: airbyte-api-server
     restart: unless-stopped
@@ -294,7 +294,7 @@ services:
       bootloader:
         condition: service_completed_successfully
   airbyte-connector-builder-server:
-    image: airbyte/connector-builder-server:${VERSION}
+    image: airbyte/connector-builder-server:dev-edc5d27084
     logging: *default-logging
     container_name: airbyte-connector-builder-server
     restart: unless-stopped
@@ -318,7 +318,7 @@ services:
       bootloader:
         condition: service_completed_successfully
   airbyte-proxy:
-    image: airbyte/proxy:${VERSION}
+    image: airbyte/proxy:0.50.40
     container_name: airbyte-proxy
     restart: unless-stopped
     ports:
