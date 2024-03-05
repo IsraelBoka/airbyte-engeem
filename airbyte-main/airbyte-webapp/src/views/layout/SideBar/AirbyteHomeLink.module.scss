@@ -1,0 +1,10 @@
+@use "scss/colors";
+
+.homeLink {
+  text-decoration: none;
+
+  &__logo {
+    color: colors.$blue-400;
+    vertical-align: bottom;
+  }
+}

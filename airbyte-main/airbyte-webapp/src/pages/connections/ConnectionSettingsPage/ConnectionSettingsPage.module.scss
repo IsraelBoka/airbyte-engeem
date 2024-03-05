@@ -1,0 +1,19 @@
+@use "scss/variables";
+
+.container {
+  max-width: 647px;
+  margin: 0 auto;
+  padding-bottom: variables.$spacing-md;
+}
+
+.heading {
+  margin-bottom: variables.$spacing-xl;
+}
+
+.advancedButton {
+  margin-top: variables.$spacing-md;
+}
+
+.advancedPanel {
+  margin-top: variables.$spacing-sm;
+}

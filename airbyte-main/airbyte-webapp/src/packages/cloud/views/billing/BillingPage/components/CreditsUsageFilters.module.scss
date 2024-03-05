@@ -1,0 +1,18 @@
+@use "scss/variables";
+@use "scss/colors";
+
+.listboxContainer {
+  width: variables.$width-extra-wide-menu;
+}
+
+.controlButtonLabel {
+  width: calc(100% - variables.$spacing-lg);
+  color: colors.$dark-blue;
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+  }
+}

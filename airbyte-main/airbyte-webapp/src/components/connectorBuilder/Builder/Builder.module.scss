@@ -1,0 +1,26 @@
+@use "scss/variables";
+@use "scss/colors";
+@use "scss/mixins";
+@use "../builderVariables.scss";
+
+.container {
+  height: 100%;
+  display: flex;
+}
+
+.sidebar {
+  @include mixins.shadow;
+
+  width: builderVariables.$sideBarWidth;
+  flex: 0 0 auto;
+  background-color: colors.$foreground;
+  border-left: 1px solid colors.$grey-100;
+}
+
+.builderView {
+  flex: 1;
+  padding: variables.$spacing-xl;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}

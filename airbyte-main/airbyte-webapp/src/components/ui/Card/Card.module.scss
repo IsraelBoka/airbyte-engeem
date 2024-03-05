@@ -1,0 +1,54 @@
+@use "scss/colors";
+@use "scss/variables";
+@use "scss/mixins";
+
+.header {
+  padding: variables.$spacing-xl;
+  color: colors.$dark-blue;
+  letter-spacing: 0.008em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  &.lightPadding {
+    padding: 19px 20px 20px;
+  }
+
+  &.roundedBottom {
+    border-radius: variables.$border-radius-lg;
+  }
+
+  &.withDescription {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.container {
+  @include mixins.shadow;
+
+  width: auto;
+  background: colors.$foreground;
+  border-radius: variables.$border-radius-lg;
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.withPadding {
+    padding: 20px;
+  }
+
+  &:has(.header + *) .header {
+    // apply the bottom border to the header only if it has a rendered sibling (the card content)
+    // checking for `children` in tsx isn't enough as the passed child can return null
+    border-bottom: colors.$grey-100 variables.$border-thin solid;
+  }
+
+  &.inset {
+    @include mixins.shadow-inset;
+  }
+}
+
+.infoTooltip {
+  color: colors.$foreground;
+}

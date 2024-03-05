@@ -1,0 +1,104 @@
+@use "scss/variables";
+@use "scss/colors";
+
+.container {
+  padding: variables.$spacing-lg;
+  position: relative;
+}
+
+.connectorName {
+  overflow-x: auto;
+  text-align: center;
+}
+
+.streamsHeader {
+  width: 100%;
+  padding: 0 variables.$spacing-sm 0 variables.$spacing-md;
+}
+
+.streamsHeading {
+  color: colors.$blue;
+  text-align: center;
+  text-transform: uppercase;
+
+  // Set line-height to 1 to make this centered with the info tooltip icon, and because this is a single line anyway
+  line-height: 1;
+}
+
+.viewButton {
+  border: none;
+  width: 100%;
+  height: 34px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: variables.$border-radius-md;
+  padding: variables.$spacing-md;
+  display: flex;
+  align-items: center;
+  gap: variables.$spacing-sm;
+  overflow: hidden;
+}
+
+.unselectedViewButton {
+  background-color: transparent;
+  color: colors.$dark-blue;
+
+  &:hover {
+    background-color: colors.$grey-50;
+  }
+}
+
+.selectedViewButton {
+  background-color: colors.$blue-40;
+  color: colors.$blue-600;
+}
+
+.streamListContainer {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.streamList {
+  flex-grow: 1;
+  flex-basis: 0;
+  overflow-y: auto;
+}
+
+.viewLabel {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  gap: variables.$spacing-sm;
+  align-items: center;
+}
+
+.errorIndicator {
+  flex: 0 0 auto;
+  margin-right: variables.$spacing-xs;
+}
+
+.streamViewText {
+  color: inherit;
+}
+
+.emptyStreamViewText {
+  color: colors.$grey-300;
+}
+
+.slackLink {
+  color: colors.$dark-blue;
+
+  &:hover {
+    color: colors.$blue;
+  }
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.slackIcon {
+  height: 14px;
+  width: 14px;
+}

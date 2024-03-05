@@ -1,0 +1,23 @@
+@use "scss/colors";
+@use "scss/variables";
+
+:export {
+  inputBackgroundColor: colors.$grey-50;
+  focusedBorderColor: colors.$blue-400;
+  hoveredBorderColor: colors.$grey-100;
+  errorBorderColor: colors.$red-100;
+  errorHoveredBorderColor: colors.$red-300;
+  paddingLeft: variables.$spacing-sm;
+  backgroundColor: colors.$grey-100;
+  fontColor: colors.$grey-600;
+  borderRadius: variables.$border-radius-xs;
+  borderRadiusDirectional: variables.$border-radius-xs variables.$border-radius-2xl variables.$border-radius-2xl
+    variables.$border-radius-xs;
+  valueBorder: 1px solid colors.$grey;
+  disabledOpacity: 0.54;
+  fontSize: variables.$font-size-lg;
+}
+
+.disabled {
+  cursor: not-allowed;
+}

@@ -1,0 +1,30 @@
+@use "scss/colors";
+@use "scss/variables";
+@use "scss/z-indices";
+
+.nav {
+  z-index: z-indices.$sidebar;
+  position: relative;
+  height: 100%;
+  width: 100px;
+  min-width: 65px;
+  background-color: colors.$foreground;
+  padding: variables.$spacing-xl variables.$spacing-xs variables.$spacing-lg;
+  text-align: center;
+  border-right: variables.$border-thin solid colors.$grey-100;
+  display: flex;
+  gap: variables.$spacing-md;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    width: 100%;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      width: 100%;
+    }
+  }
+}

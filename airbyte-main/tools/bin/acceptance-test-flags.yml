@@ -1,0 +1,29 @@
+flags:
+  - name: performance.backgroundJsonSchemaValidation
+    serve: false
+  - name: heartbeat.failSync
+    serve: true
+  - name: platform.commitStatsAsap
+    serve: true
+  - name: connectors.versionOverridesEnabled
+    serve: true
+  - name: billing.newTrialPolicy
+    serve: false
+  - name: heartbeat-max-seconds-between-messages
+    serve: "10800"
+  - name: use-new-notification-workflow
+    serve: false
+  - name: validation.removeValidationLimit
+    serve: false
+  - name: autopropagation.enabled
+    serve: true
+  - name: autopropagate-new-streams.enabled
+    serve: true
+  - name: connection.columnSelection
+    serve: true
+  - name: refreshSchema.period.hours
+    serve: 0
+  - name: platform.auto-backfill-on-new-columns
+    serve: true
+  - name: platform.remove-large-sync-inputs
+    serve: true

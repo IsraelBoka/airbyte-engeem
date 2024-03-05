@@ -1,0 +1,21 @@
+@use "scss/variables";
+
+.footer {
+  padding-top: variables.$spacing-xl;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statusFilter {
+  min-width: 160px;
+}
+
+.dateFilter {
+  width: 160px;
+}
+
+.jobCount {
+  margin-left: auto;
+}

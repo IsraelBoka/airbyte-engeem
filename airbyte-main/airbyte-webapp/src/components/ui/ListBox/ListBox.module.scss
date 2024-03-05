@@ -1,0 +1,87 @@
+@use "scss/variables";
+@use "scss/colors";
+@use "scss/z-indices";
+
+.button {
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid colors.$grey-50;
+  background-color: colors.$grey-50;
+  border-radius: variables.$border-radius-xs;
+  padding: 7px 8px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: variables.$spacing-md;
+  font-size: variables.$font-size-lg;
+  line-height: 1.4;
+  min-height: 36px;
+
+  &:disabled {
+    background: colors.$grey-30;
+    cursor: default;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: colors.$grey-100;
+  }
+
+  &--error {
+    border-color: colors.$red-100;
+
+    &:hover:not(:disabled) {
+      border-color: colors.$red;
+    }
+  }
+
+  .disabledText {
+    color: colors.$dark-blue-200;
+  }
+}
+
+.optionsMenu {
+  background-color: colors.$foreground;
+  border-radius: variables.$border-radius-lg;
+  box-shadow: variables.$box-shadow-menu;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+}
+
+.option {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.optionValue {
+  padding: (variables.$spacing-xs + variables.$spacing-md) variables.$spacing-lg;
+  cursor: pointer;
+}
+
+.icon {
+  max-width: 18px;
+  max-height: 18px;
+}
+
+.label {
+  color: inherit;
+  font-size: variables.$font-size-lg;
+}
+
+.active {
+  background-color: colors.$grey-50;
+}
+
+.selected {
+  background-color: colors.$blue-50;
+}
+
+.disabled {
+  color: colors.$grey-300;
+}
