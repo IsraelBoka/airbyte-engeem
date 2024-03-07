@@ -35,7 +35,7 @@ keycloak.init({
   if (authenticated) {
     const root = createRoot(document.getElementById("root")!);
     root.render(<Suspense fallback={null}>{isCloudApp() ? <CloudApp /> : <App />}</Suspense>);
-  } else {https://github.com/IsraelBoka/airbyte-engeem
+  } else {
     console.error("Failed to authenticate with Keycloak");
   }
 });
