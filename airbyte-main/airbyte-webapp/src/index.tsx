@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
-import Keycloak from 'keycloak-js';
+import Keycloak from "keycloak-js";
 
 import "react-reflex/styles.css";
 import { isCloudApp } from "core/utils/app";
@@ -23,14 +23,14 @@ const App = lazy(() => import(`./App`));
 
 const keycloak = new Keycloak({
   //url: 'http://localhost:8081/',
-  url: 'https://authenticator.engeem.com/',
+  url: "https://authenticator.engeem.com/",
   //realm: 'master',
-  realm: 'engeem',
-  clientId: 'airbyte'
+  realm: "engeem",
+  clientId: "airbyte"
 });
 
 keycloak.init({
-  onLoad: 'login-required'
+  onLoad: "login-required"
 }).then((authenticated) => {
   if (authenticated) {
     const root = createRoot(document.getElementById("root")!);
