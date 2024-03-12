@@ -1,14 +1,12 @@
 import { lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
-import Keycloak from "keycloak-js";
-
 import "react-reflex/styles.css";
 import { isCloudApp } from "core/utils/app";
 import { loadDatadog } from "core/utils/datadog";
 import { loadOsano } from "core/utils/dataPrivacy";
-
 import "./dayjs-setup";
 import "./scss/global.scss";
+import Keycloak from "keycloak-js";
 
 // We do not follow default config approach since we want to init datadog asap
 loadDatadog();
@@ -22,9 +20,9 @@ const CloudApp = lazy(() => import(`packages/cloud/App`));
 const App = lazy(() => import(`./App`));
 
 const keycloak = new Keycloak({
-  //url: 'http://localhost:8081/',
+  // url: 'http://localhost:8081/',
   url: "https://authenticator.engeem.com/",
-  //realm: 'master',
+  // realm: 'master',
   realm: "engeem",
   clientId: "airbyte"
 });
